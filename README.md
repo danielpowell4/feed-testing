@@ -20,4 +20,5 @@ use of jasmine's off the shelf, helpful async functionality
 ## See the tests pass!
 
 To see the passing tests, visit http://danielpowell4.github.io/feed-testing/ and view the
-jasmine module at the bottom!
+jasmine module at the bottom OR clone the repo and open the index.html file in your
+favorite modern browser. Tests are to be found in jasmine->spec->feedreader.js
