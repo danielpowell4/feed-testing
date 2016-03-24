@@ -22,7 +22,7 @@ $(function() {
         it('has items with URLS', function() {
             for (var item in allFeeds) {
                 expect(allFeeds[item].url).toBeDefined();
-                expect(allFeeds[item].url).not.toBe(0);
+                expect(allFeeds[item].url.length).not.toBe(0);
             }
         });
 
@@ -35,7 +35,7 @@ $(function() {
         it('has items with names', function() {
             for (var item in allFeeds) {
                 expect(allFeeds[item].name).toBeDefined();
-                expect(allFeeds[item].name).not.toBe(0);
+                expect(allFeeds[item].name.length).not.toBe(0);
                 expect(typeof allFeeds[item].name).toBe('string');
             }
         });
@@ -84,7 +84,6 @@ $(function() {
          **/
         it('has at least one within feed container', function() {
             var $entry = $('.entry');
-            expect($entry).toBeDefined();
             expect($entry.length).toBeGreaterThan(0);
         });
     }); // from inital Enteries suite
@@ -104,7 +103,7 @@ $(function() {
         });
 
         // afterEach reloads first entry
-        afterEach(function() {
+        afterAll(function() {
             loadFeed(0);
         });
 
